@@ -1,0 +1,2 @@
+/home/brayan/Univ/L3/bateau/runApp/Debug/bin/apptest
+/home/brayan/Univ/L3/bateau/runApp/./run.sh
