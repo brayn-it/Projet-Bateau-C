@@ -20,12 +20,18 @@ void Menu::initButtons(){
     StartButton.setSize({200, 60});
     StartButton.setPosition({100, 400});
     StartButton.setFillColor(sf::Color::Green);
+
+    titletText.setFont(font);
+    titletText.setString("BOAT RACE");
+    titletText.setCharacterSize(50);
+    titletText.setFillColor(sf::Color::Green);
+    titletText.setPosition(10,10);
+
     OnePlayerText.setFont(font);
     OnePlayerText.setString("1 Joueur");
     OnePlayerText.setCharacterSize(24);
     OnePlayerText.setFillColor(sf::Color::White);
     OnePlayerText.setPosition(OnePlayerButton.getPosition().x + 30, OnePlayerButton.getPosition().y + 15);
-    //OnePlayerText.setPosition(430, 115);
 
     TwoPlayerText.setFont(font);
     TwoPlayerText.setString("2 Joueurs");
@@ -42,6 +48,8 @@ void Menu::initButtons(){
 }
 
 void Menu::render(){
+    window.draw(titletText);
+
     window.draw(OnePlayerButton);
     window.draw(OnePlayerText);
 

@@ -17,6 +17,7 @@ class Menu{
         sf::RectangleShape TwoPlayerButton;
         sf::RectangleShape StartButton;
         sf::Font font;
+        sf::Text titletText;
         sf::Text OnePlayerText;
         sf::Text TwoPlayerText;
         sf::Text StartText;
