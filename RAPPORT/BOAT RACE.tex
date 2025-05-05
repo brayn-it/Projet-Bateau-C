@@ -32,11 +32,11 @@ Ce rapport abordera d’abord les fonctionnalités mises en place dans l’appli
 Grâce à libphysics on a pu reproduire le comportement dynamique d’un bateau sous l’effet des forces (propulsion du moteur, le frottement avec l’eau, la rotation…).
 Des méthodes sont intégrées dans la bibliothèque pour calculer les forces afin de les appliquer sur les caractéristiques physiques du bateau: vitesse linéaire, vitesse angulaire, position et orientation. 
 Ainsi nous avons un comportement crédible de dérive, de rotation lente et d’inertie.
-Bien que l’on dispose de méthodes pour nous permettre d’avoir des bateaux bien aux caractéristiques bien personnalisées, on s’est limitée à la méthode pour créer un bateau générique. contenu...
+Bien que l’on dispose de méthodes pour nous permettre d’avoir des bateaux avec des caractéristiques personnalisées, on s’est limitée à la méthode de création de bateau générique contenu dans le fichier physicsEngine.h.
 
 \section{Affichage graphique synchrone}
 Nous avons représenté graphiquement le bateau avec un polygone simple, dont le barycentre est identifié au corps physique du bateau réel.
-On a établi un facteur de conversion au début: 1pixel =10 mètres.
+On a établi un facteur de conversion : 0.1.
 En fonction des résultats des calculs des forces sur le corps physique du bateau, on convertit les positions et on dessine à nouveau chaque point du polygone selon les coordonnées du barycentre. Les transformations des points sont calculées via la rotation et la translation.
 Ainsi on voit la position et l’orientation exactes des bateaux.
 
