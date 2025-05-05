@@ -9,6 +9,8 @@
 
 %package lien
 \usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+\usepackage{graphicx}
+
 
 
 % Title Page
@@ -86,6 +88,15 @@ Cas similaire quand l’un des deux bateaux franchit la ligne d’arrivée mais 
 
 
 \chapter{Choix de l'architecture}
+Pour nous faciliter l’implémentation des fonctionnalités, on a opté pour une architecture orientée objet et modulaire. Cela permet de faire évoluer les fonctionnalités sans impacter les autres. Ainsi tout le projet est divisé en plusieurs classes et nous avons séparé les fichiers .hpp et .cpp. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{diagrammeClasses}
+	\caption{Diagramme de classes. *MultiColorLight=starting\_light}
+	\label{fig:monimage}
+\end{figure}
+
 
 \section{Game}
 Classe qui exécute la boucle du jeu et la gestion des fenêtres ou pages qui y sont associées (Menu et fenêtre de course).
@@ -110,7 +121,7 @@ Simple rectangle qui permet d’accélérer encore plus le bateau.
 \section{Line}
 Un rectangle allongé pour représenter la ligne de départ et la ligne d’arrivée.
 
-\section{MultiColorLight}
+\section{starting\_light}
 Cercle qui change de couleur pour signaler le départ.
 
 \section{Dashboard}
